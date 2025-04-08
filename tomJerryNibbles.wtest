@@ -22,7 +22,6 @@ describe "Grupo de test" {
     assert.equals(14, tom.velMax())
     assert.equals(90, tom.energia())
   }
-}
 
   test "ahora come a nibbles velMax 18.7 energia 137"{
     tom.comer(nibbles)
@@ -43,3 +42,18 @@ describe "Grupo de test" {
     assert.equals(24, tom.velMax())
     assert.equals(190, tom.energia())
   }
+
+  test "puede comer tom a un raton"{
+    assert.that(tom.puedeCazar(99))
+  }
+
+  test "puede no comer tom a un raton"{
+    assert.notThat(tom.puedeCazar(150))
+  }
+
+  test "tom caza a nibbles que está a 50 metros energia es 72 velmax 12.2"{
+    tom.cazar(nibbles, 50)
+    assert.equals(72, tom.energia())
+    assert.equals(12.2, tom.velMax())
+  }
+}
