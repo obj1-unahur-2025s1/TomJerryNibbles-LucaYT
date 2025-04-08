@@ -11,8 +11,8 @@ object tom {
     distanciaRecorrida = distanciaRecorrida + metros //actualizo distancia recorrida
     }
   method velMax(){return 5 + energia * 0.1} //Pregunto velocidad máxima de Tom
-  method puedeCazar(distancia){return energia * 2 > distancia}
-  method energia(){return energia}
+  method puedeCazar(distancia){return energia * 2 > distancia} //Pregunto si puede cazar a determinada distancia
+  method energia(){return energia} //Pregunto energia actual
 }
 
 object jerry {

@@ -12,8 +12,34 @@ describe "Grupo de test" {
     assert.equals(102, tom.energia())
   }
 
-  test "test 4" {
+  test "e" {
     assert.notThat(false)
   }
 
+  test "ahora el corre 24, velmax 14 energia 90"{
+    tom.comer(jerry)
+    tom.correr(24)
+    assert.equals(14, tom.velMax())
+    assert.equals(90, tom.energia())
+  }
 }
+
+  test "ahora come a nibbles velMax 18.7 energia 137"{
+    tom.comer(nibbles)
+    assert.equals(18.7, tom.velMax())
+    assert.equals(137, tom.energia())
+  }
+
+  test "jerry cumple anios tom lo come vel max 25.9 y energia 209"{
+    jerry.cuplirAnios()
+    tom.comer(jerry)
+    assert.equals(25.9, tom.velMax())
+    assert.equals(209, tom.energia())
+  }
+
+
+  test "tom corre 38 metros velmax 24, energia 190"{
+    tom.correr(38)
+    assert.equals(24, tom.velMax())
+    assert.equals(190, tom.energia())
+  }
