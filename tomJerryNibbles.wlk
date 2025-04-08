@@ -11,6 +11,7 @@ object tom {
     distanciaRecorrida = distanciaRecorrida + metros
     }
   method velMax(){return 5 + energia * 0.1}
+  method puedeCazar(distancia){return energia * 2 > distancia}
 }
 
 object jerry {
@@ -18,7 +19,7 @@ object jerry {
   var peso = edad * 20
   method cuplirAnios(){edad += 1}
   method edadActual(){return edad}
-
+  method pesoActual(){return peso}
 }
 
 object nibbles {
@@ -28,6 +29,7 @@ object nibbles {
 object jorgito{
   //jorgito puede cambiar su peso a voluntad
   var peso = 30
+  method pesoActual(){return peso}
   method cambiarPeso(nuevoPeso){peso = nuevoPeso}
 }
 
